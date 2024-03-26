@@ -1,18 +1,70 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData, useNavigation, useParams } from "react-router-dom";
+
+import { useEffect, useState } from "react";
 
 
 const BookDetails = () => {
+
+    const [book, setBook] = useState([]);
     const { bookId } = useParams();
-    // console.log(bookId);
+    const bookInNum = parseInt(bookId)
+    const allbook = useLoaderData();
+
+    const navigation = useNavigation();
+    useEffect(() => {
+        const rem = allbook.filter(item => item.bookId === bookInNum);
+        setBook(rem[0])
+    }, [])
+
+    if (navigation.state === 'loading') {
+        return <p className="text-7xl">Loading....</p>
+    }
+
+
+    const { tags } = book;
+
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row">
-                    <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 className="text-5xl font-bold">Box Office News!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+
+            <div className="hero min-h-screen">
+                <div className="hero-content flex-col lg:flex-row p-10 gap-10">
+
+                    <div className="bg-base-200 p-10 rounded-2xl">
+                        <img src={book.image} className="max-w-sm rounded-lg shadow-2xl" />
+                    </div>
+                    <div className="space-y-5">
+                        <h1 className="text-5xl font-bold">{book.bookName}</h1>
+                        <p className="py-6 text-[#131313CC] font-bold">By : {book.author}</p>
+                        <hr />
+                        <p className="text-[#131313CC] font-bold">{book.category}</p>
+                        <hr />
+                        <p><span className="font-bold">Review : </span><span className="text-[#131313CC]">{book.review}</span></p>
+                        <div className="gap-5 flex items-center">
+                            <p className="font-bold">Tags : </p>
+                            {
+                                tags?.map((tag, idx) => <a key={idx} className="bg-[#23BE0A0D] font-medium p-2 rounded-2xl text-[#23BE0A]">{tag}</a>)
+                            }
+                        </div>
+
+                        <hr />
+                        <div className="flex gap-10">
+                            <div className="space-y-5">
+                                <p>Number of Pages: </p>
+                                <p>Publisher: </p>
+                                <p>Year of Publishing: </p>
+                                <p>Rating: </p>
+                            </div>
+                            <div className="space-y-5">
+                                <p className="font-bold">{book.totalPages}</p>
+                                <p className="font-bold">{book.publisher}</p>
+                                <p className="font-bold">{book.yearOfPublishing}</p>
+                                <p className="font-bold">{book.rating}</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-3">
+                            <button className="btn btn-primary">Read</button>
+                            <button className="btn btn-primary">Wishlist</button>
+                        </div>
                     </div>
                 </div>
             </div>

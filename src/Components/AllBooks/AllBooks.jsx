@@ -5,6 +5,7 @@ import BookCard from "./BookCard";
 
 const AllBooks = () => {
     const { books } = useFetchData();
+    // console.log(books)
 
     return (
         <div className="mt-20">

@@ -4,12 +4,12 @@ import { useState } from "react";
 const useFetchData = () => {
     const [books, setBooks] = useState([]);
     useEffect(() => {
-        fetch('./book.json')
+        fetch('/book.json')
             .then(res => res.json())
             .then(data => setBooks(data))
     }, [])
-    
-    return {books};
+
+    return { books };
 };
 
 export default useFetchData;
