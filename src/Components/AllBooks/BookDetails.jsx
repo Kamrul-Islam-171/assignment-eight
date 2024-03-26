@@ -1,11 +1,14 @@
 import { useLoaderData, useNavigation, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
+import { storeToLocalStorage } from "../utils/localStorageData";
+import { isRead, storeWishListToLocalStorage } from "../utils/localWishList";
 
 
 const BookDetails = () => {
 
     const [book, setBook] = useState([]);
+    // const [read, setRead] = useState(false);
     const { bookId } = useParams();
     const bookInNum = parseInt(bookId)
     const allbook = useLoaderData();
@@ -13,12 +16,39 @@ const BookDetails = () => {
     const navigation = useNavigation();
     useEffect(() => {
         const rem = allbook.filter(item => item.bookId === bookInNum);
-        setBook(rem[0])
+        setBook(rem[0]);
     }, [])
+
+
 
     if (navigation.state === 'loading') {
         return <p className="text-7xl">Loading....</p>
     }
+
+
+    const handleRead = () => {
+        const x = storeToLocalStorage(book);
+        if (x) alert('already read')
+        else {
+            alert('read the book')
+        }
+    }
+
+    const handleWishList = () => {
+        const x = isRead(book);
+        if (x) {
+            return alert('you can not wish')
+        }
+        const y = storeWishListToLocalStorage(book);
+        if (y) {
+            return alert('Already wished!');
+        }
+        alert('wished!');
+
+    }
+    // console.log("read = ", read)
+
+
 
 
     const { tags } = book;
@@ -62,8 +92,8 @@ const BookDetails = () => {
                             </div>
                         </div>
                         <div className="flex gap-3">
-                            <button className="btn btn-primary">Read</button>
-                            <button className="btn btn-primary">Wishlist</button>
+                            <button onClick={handleRead} className="btn px-5 border-[#1313134D]">Read</button>
+                            <button onClick={handleWishList} className="btn bg-[#50B1C9] text-white px-5">Wishlist</button>
                         </div>
                     </div>
                 </div>
