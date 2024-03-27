@@ -41,7 +41,7 @@ const ReadBookCard = ({ book }) => {
                 <div className='flex flex-col lg:flex-row gap-5'>
                     <p className='bg-[#328EFF26] py-3 px-5 flex justify-center rounded-full text-[#328EFF]'>Category: {category}</p>
                     <p className='bg-[#FFAC3326] py-3 px-8 flex justify-center rounded-full text-[#FFAC33]'>Rating:{rating}</p>
-                    <button onClick={handleGotoList} className='bg-[#23BE0A] py-3 px-5 rounded-full  text-white'>View Details</button>
+                    <button onClick={handleGotoList} className='bg-[#23BE0A] py-3 px-5 rounded-full hover:bg-green-900 text-white'>View Details</button>
                 </div>
             </div>
         </div>

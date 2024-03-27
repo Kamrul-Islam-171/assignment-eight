@@ -6,6 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 import ReadBook from '../ReadBooks/ReadBook';
 import WishList from '../WishList/WishList';
 import { useState } from 'react';
+import { IoIosArrowDropdown } from "react-icons/io";
 
 
 const ListedBooks = () => {
@@ -18,7 +19,7 @@ const ListedBooks = () => {
             </div>
             <div className="flex justify-center">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn border-none px-5 text-white  m-1 bg-[#23BE0A]">Sort By</div>
+                    <div tabIndex={0} role="button" className="btn border-none px-5 text-white  m-1 bg-[#23BE0A] hover:bg-green-900">Sort By<span className='text-xl'><IoIosArrowDropdown /></span></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a onClick={() => setSortBy('sortByRating')}>Sort By Rating</a></li>
                         <li><a onClick={() => setSortBy('sortByPublishedYear')}>Sort By Published Year</a></li>
@@ -48,10 +49,10 @@ const ListedBooks = () => {
                     </TabList>
 
                     <TabPanel>
-                        <ReadBook sortBy = {sortBy}></ReadBook>
+                        <ReadBook sortBy={sortBy}></ReadBook>
                     </TabPanel>
                     <TabPanel>
-                        <WishList sortBy = {sortBy}></WishList>
+                        <WishList sortBy={sortBy}></WishList>
                     </TabPanel>
                 </Tabs>
             </div>
