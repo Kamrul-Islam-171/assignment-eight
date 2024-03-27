@@ -5,10 +5,12 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ReadBook from '../ReadBooks/ReadBook';
 import WishList from '../WishList/WishList';
+import { useState } from 'react';
 
 
 const ListedBooks = () => {
     // const [tab, setTab] = useState(0);
+    const [sortBy, setSortBy] = useState('Default');
     return (
         <div className='space-y-5'>
             <div className="bg-[#1313130D] py-5 rounded-2xl">
@@ -18,8 +20,8 @@ const ListedBooks = () => {
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn border-none px-5 text-white  m-1 bg-[#23BE0A]">Sort By</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a onClick={() => setSortBy('sortByRating')}>Sort By Rating</a></li>
+                        <li><a onClick={() => setSortBy('sortByPublishedYear')}>Sort By Published Year</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,10 +48,10 @@ const ListedBooks = () => {
                     </TabList>
 
                     <TabPanel>
-                        <ReadBook></ReadBook>
+                        <ReadBook sortBy = {sortBy}></ReadBook>
                     </TabPanel>
                     <TabPanel>
-                        <WishList></WishList>
+                        <WishList sortBy = {sortBy}></WishList>
                     </TabPanel>
                 </Tabs>
             </div>
