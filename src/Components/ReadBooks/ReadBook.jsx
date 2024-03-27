@@ -27,7 +27,10 @@ const ReadBook = ({ sortBy }) => {
     else if (sortBy == 'sortByPublishedYear') {
         readBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
     }
-    console.log(sortBy, readBooks);
+    else if(sortBy == 'sortByTotalPages') {
+        readBooks.sort((a, b) => b.totalPages - a.totalPages);
+    }
+    // console.log(sortBy, readBooks);
     return (
         <div className="mt-10 space-y-5">
             {

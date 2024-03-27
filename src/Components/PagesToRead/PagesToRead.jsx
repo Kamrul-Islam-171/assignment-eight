@@ -6,6 +6,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip } from 'recha
 import { useLoaderData } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getLocalData } from '../utils/localStorageData';
+import NoData from '../NoData/NoData';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink', 'green', 'purple'];
 
@@ -36,11 +37,13 @@ export default function PagesToRead() {
         setBooks(bookList);
 
     }, [])
-    console.log(books);
+    if (books.length == 0) {
+        return <NoData msg={'Read'}></NoData>
+    }
     return (
         <div className=' h-[500px] mt-20 flex justify-center items-center'>
             <BarChart
-                width={700}
+                width={800}
                 height={300}
                 data={books}
                 margin={{

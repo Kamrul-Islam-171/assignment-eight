@@ -23,6 +23,9 @@ const WishList = ({sortBy}) => {
     else if (sortBy == 'sortByPublishedYear') {
         readBooks.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
     }
+    else if(sortBy == 'sortByTotalPages') {
+        readBooks.sort((a, b) => b.totalPages - a.totalPages);
+    }
     return (
         <div className="mt-10 space-y-5">
             {

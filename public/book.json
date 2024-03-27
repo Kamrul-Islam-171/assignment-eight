@@ -126,5 +126,40 @@
         ],
         "publisher": "HarperCollins",
         "yearOfPublishing": 1988
+    },
+    {
+        "bookId": 9,
+        "bookName": "Feluda Omnibus",
+        "author": "Satyajit Ray",
+        "image": "https://i.ibb.co/LCjM4NF/Feluda-2.jpg",
+        "review": "'Feluda Omnibus' is a collection of detective novels by Satyajit Ray, featuring the brilliant detective Feluda. These stories bring together the adventures of Feluda, a masterful investigator, and his companions as they solve various intriguing cases. Through Feluda's keen intellect and sharp observations, readers are taken on thrilling journeys through the streets of Kolkata and beyond. The stories in 'Feluda Omnibus' not only entertain but also provide insights into societal issues and human nature. With its engaging plots, memorable characters, and clever twists, this collection is a must-read for fans of detective fiction.",
+        "totalPages": 500,
+        "rating": 4.8,
+        "category": "Detective",
+        "tags": [
+            "Feluda",
+            "Detective",
+            "Bengali Novel"
+        ],
+        "publisher": "Ananda Publishers",
+        "yearOfPublishing": 1975
+    },
+    {
+        "bookId": 10,
+        "bookName": "Tuntuni'r Boi",
+        "author": "Upendrakishore Ray Chowdhury",
+        "image": "https://i.ibb.co/yBJyZGc/b5283a1be-185524.jpg",
+        "review": "'Tuntuni'r Boi' is a delightful collection of children's stories written by Upendrakishore Ray Chowdhury, a pioneer of Bengali children's literature. The book features the adventures of Tuntuni, a curious and mischievous little bird, as he explores the world around him. Through Tuntuni's escapades, young readers learn valuable lessons about friendship, courage, and kindness. Upendrakishore's engaging storytelling and vivid illustrations make 'Tuntuni'r Boi' a beloved classic that continues to captivate generations of Bengali children.",
+        "totalPages": 120,
+        "rating": 4.9,
+        "category": "Children's Literature",
+        "tags": [
+            "Tuntuni",
+            "Children's Stories",
+            "Adventure"
+        ],
+        "publisher": "Ananda Publishers",
+        "yearOfPublishing": 1915
     }
+    
 ]

@@ -23,6 +23,7 @@ const ListedBooks = () => {
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a onClick={() => setSortBy('sortByRating')}>Sort By Rating</a></li>
                         <li><a onClick={() => setSortBy('sortByPublishedYear')}>Sort By Published Year</a></li>
+                        <li><a onClick={() => setSortBy('sortByTotalPages')}>Sort By Total Pages</a></li>
                     </ul>
                 </div>
             </div>
