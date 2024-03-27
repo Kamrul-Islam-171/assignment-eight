@@ -4,12 +4,14 @@ import ListedBooks from '../ListedBooks/ListedBooks';
 import PagesToRead from '../PagesToRead/PagesToRead';
 import Mainlayout from '../Mainlayout/Mainlayout'
 import BookDetails from "../AllBooks/BookDetails";
+import ErrorComponent from "../ErrorComponent/ErrorComponent";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Mainlayout />,
+        errorElement:<ErrorComponent></ErrorComponent>,
         children: [
             {
                 path: '/',

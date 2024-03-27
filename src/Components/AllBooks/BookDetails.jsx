@@ -3,6 +3,7 @@ import { useLoaderData, useNavigation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { storeToLocalStorage } from "../utils/localStorageData";
 import { isRead, storeWishListToLocalStorage } from "../utils/localWishList";
+import toast from "react-hot-toast";
 
 
 const BookDetails = () => {
@@ -21,29 +22,29 @@ const BookDetails = () => {
 
 
 
-    if (navigation.state === 'loading') {
-        return <p className="text-7xl">Loading....</p>
-    }
+    // if (navigation.state === 'loading') {
+    //     return <p className="text-7xl">Loading....</p>
+    // }
 
 
     const handleRead = () => {
         const x = storeToLocalStorage(book);
-        if (x) alert('already read')
+        if (x) toast.error('Already Read')
         else {
-            alert('read the book')
+            toast.success('Read the book')
         }
     }
 
     const handleWishList = () => {
         const x = isRead(book);
         if (x) {
-            return alert('you can not wish')
+            return toast.error('you can not wish')
         }
         const y = storeWishListToLocalStorage(book);
         if (y) {
-            return alert('Already wished!');
+            return toast.error('Already wished!');
         }
-        alert('wished!');
+        toast.success('wished!');
 
     }
     // console.log("read = ", read)
