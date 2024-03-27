@@ -10,7 +10,7 @@ const AllBooks = () => {
     return (
         <div className="mt-20">
             <div>
-                <h1 className="text-4xl font-bold text-center">Books</h1>
+                <h1 className="text-4xl font-bold text-center playfair-display">Books</h1>
             </div>
             <div className="grid lg:grid-cols-3 gap-5 mt-10">
                 {

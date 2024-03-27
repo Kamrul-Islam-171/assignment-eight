@@ -7,7 +7,7 @@ const KidsJone = () => {
     const books = useLoaderData();
     const [kidsBooks, setKidsBooks] = useState([]);
     useEffect(() => {
-        const desiredBooks = books.filter(book => book.category == 'Fantasy' || book.category == 'Detective');
+        const desiredBooks = books.filter(book => book.category == 'Fantasy' || book.category == 'Detective' || book.category == 'Children Literature');
         setKidsBooks(desiredBooks);
     }, [])
     console.log(kidsBooks)

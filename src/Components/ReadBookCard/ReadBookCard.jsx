@@ -23,7 +23,7 @@ const ReadBookCard = ({ book }) => {
                 </div>
             </div>
             <div className='flex flex-col justify-between gap-6 w-full'>
-                <h1 className='text-2xl font-bold'>{bookName}</h1>
+                <h1 className='text-2xl font-bold playfair-display'>{bookName}</h1>
                 <p className="text-[#131313CC] font-medium">By : {author}</p>
                 <div className="gap-5 flex flex-col lg:flex-row lg:items-center">
                     <p className="font-bold">Tag : </p>

@@ -19,7 +19,7 @@ const BookCard = ({ book }) => {
                         tags.map((tag, idx) => <a key={idx} className="bg-[#23BE0A0D] font-medium p-2 rounded-2xl text-[#23BE0A]">{tag}</a>)
                     }
                 </div>
-                <h1 className="text-2xl font-bold">{bookName}</h1>
+                <h1 className="text-2xl font-bold playfair-display">{bookName}</h1>
                 <p className="text-[#131313CC] font-medium">By : {author}</p>
                 <hr />
                 <div className="flex justify-between text-[#131313CC] font-medium">
