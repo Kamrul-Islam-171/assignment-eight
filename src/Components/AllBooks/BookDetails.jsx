@@ -66,9 +66,9 @@ const BookDetails = () => {
                     <div className="space-y-5">
                         <h1 className="text-5xl font-bold playfair-display">{book.bookName}</h1>
                         <p className="py-6 text-[#131313CC] font-bold">By : {book.author}</p>
-                        <hr />
+                        <hr className="border-2" />
                         <p className="text-[#131313CC] font-bold">{book.category}</p>
-                        <hr />
+                        <hr className="border-2" />
                         <p><span className="font-bold">Review : </span><span className="text-[#131313CC]">{book.review}</span></p>
                         <div className="gap-5 flex items-center">
                             <p className="font-bold">Tags : </p>
@@ -77,7 +77,7 @@ const BookDetails = () => {
                             }
                         </div>
 
-                        <hr />
+                        <hr className="border-2" />
                         <div className="flex gap-10">
                             <div className="space-y-5">
                                 <p>Number of Pages: </p>

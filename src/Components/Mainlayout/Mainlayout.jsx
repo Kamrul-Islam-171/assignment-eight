@@ -1,13 +1,18 @@
 
-import { Outlet } from 'react-router-dom';
-import Home from '../Home/Home';
+import { Outlet, useNavigation } from 'react-router-dom';
+
 import NavBar from '../NavBar/NavBar';
 
+
 const Mainlayout = () => {
+    const navigation = useNavigation();
     return (
         <div>
             <NavBar></NavBar>
-            <Outlet></Outlet>
+            {
+
+                navigation.state === 'loading' ? <p className='text-7xl text-center mt-20'>Loading...</p> : <Outlet></Outlet>
+            }
         </div>
     );
 };
