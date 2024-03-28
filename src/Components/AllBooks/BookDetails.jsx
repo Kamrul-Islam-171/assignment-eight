@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigation, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import { storeToLocalStorage } from "../utils/localStorageData";
@@ -14,7 +14,7 @@ const BookDetails = () => {
     const bookInNum = parseInt(bookId)
     const allbook = useLoaderData();
 
-    const navigation = useNavigation();
+   
     useEffect(() => {
         const rem = allbook.filter(item => item.bookId === bookInNum);
         setBook(rem[0]);

@@ -41,7 +41,7 @@ export default function PagesToRead() {
         return <NoData msg={'Read'}></NoData>
     }
     return (
-        <div className=' h-[500px] mt-20 flex justify-center items-center'>
+        <div className=' h-[500px] mt-20 flex justify-center items-center bg-gray-100 rounded-2xl'>
             <BarChart
                 width={800}
                 height={300}
