@@ -3,7 +3,7 @@
 
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 
-import { useLoaderData } from 'react-router-dom';
+// import { useLoaderData } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getLocalData } from '../utils/localStorageData';
 import NoData from '../NoData/NoData';
@@ -43,8 +43,8 @@ export default function PagesToRead() {
     return (
         <div className=' h-[500px] mt-20 flex justify-center items-center bg-gray-100 rounded-2xl'>
             <BarChart
-                width={800}
-                height={300}
+                width={1200}
+                height={400}
                 data={books}
                 margin={{
                     top: 20,

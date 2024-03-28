@@ -14,7 +14,7 @@ const BookDetails = () => {
     const bookInNum = parseInt(bookId)
     const allbook = useLoaderData();
 
-   
+
     useEffect(() => {
         const rem = allbook.filter(item => item.bookId === bookInNum);
         setBook(rem[0]);
@@ -106,13 +106,13 @@ const BookDetails = () => {
                 </div>
                 <div className="space-y-5 lg:w-[58%]">
                     <h1 className="text-5xl font-bold playfair-display">{book.bookName}</h1>
-                    <p className="py-6 text-[#131313CC] font-bold">By : {book.author}</p>
+                    <p className="py-6 text-[#131313CC] font-bold text-xl">By : {book.author}</p>
                     <hr className="border-2" />
                     <p className="text-[#131313CC] font-bold">{book.category}</p>
                     <hr className="border-2" />
                     <p><span className="font-bold">Review : </span><span className="text-[#131313CC]">{book.review}</span></p>
                     <div className="gap-5 flex items-center">
-                        <p className="font-bold">Tags : </p>
+                        <p className="font-bold">Tag : </p>
                         {
                             tags?.map((tag, idx) => <a key={idx} className="bg-[#23BE0A0D] font-medium p-2 rounded-2xl text-[#23BE0A]">{tag}</a>)
                         }
