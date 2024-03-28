@@ -13,7 +13,7 @@ const ListedBooks = () => {
     // const [tab, setTab] = useState(0);
     const [sortBy, setSortBy] = useState('Default');
     return (
-        <div className='space-y-5'>
+        <div className='space-y-5 mt-14'>
             <div className="bg-[#1313130D] py-5 rounded-2xl">
                 <h1 className="font-bold text-3xl text-center">Books</h1>
             </div>

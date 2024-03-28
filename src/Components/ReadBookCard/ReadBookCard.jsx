@@ -17,9 +17,9 @@ const ReadBookCard = ({ book }) => {
     return (
 
         <div className='flex flex-col lg:flex-row gap-10 border-2 border-[#13131326] rounded-xl p-8'>
-            <div className='bg-[#1313130D] p-5 flex justify-center items-center rounded-xl'>
+            <div className='bg-[#1313130D] p-3 flex justify-center items-center rounded-xl'>
                 <div>
-                    <img className='w-[200px]' src={image} alt="" />
+                    <img className='w-[300px]' src={image} alt="" />
                 </div>
             </div>
             <div className='flex flex-col justify-between gap-6 w-full'>

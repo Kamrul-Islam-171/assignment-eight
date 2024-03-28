@@ -9,6 +9,12 @@ ul a.active {
 
 }
 
+ul a.active:hover {
+    background-color: #23BE0A;
+    color: white;
+    font-weight: 600;
+}
+
 ul a:hover {
     background-color: #23BE0A66;
     border-radius: 8px;
