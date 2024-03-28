@@ -11,4 +11,4 @@ Features and characteristics :
 - Kids Jone (Books for kids).
 - By clicking on the book card, it will navigate you to the book details page.
 
-  live link https://660506e308e40d45a4e35126--fastidious-axolotl-88b2d7.netlify.app/
+  live link https://courageous-donut-657957.netlify.app/
